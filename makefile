@@ -2,7 +2,14 @@ CC = clang
 SRC = main.c ./src/arena_alloc.c
 INCLUDES = -I./include
 
-CFLAGS = -Wall -Werror -O2
+# Toggle to 1 for debug builds
+DEBUG ?= 0
+
+ifeq ($(DEBUG), 1)
+	CFLAGS = -Wall -Werror -g -fsanitize=address,undefined -DDEBUG
+else
+	CFLAGS = -Wall -Werror -O2
+endif
 
 TARGET = main
 
