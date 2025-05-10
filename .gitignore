@@ -1,0 +1,37 @@
+# Build directories
+/build/
+/bin/
+/lib/
+/CMakeFiles/
+/cmake-build-*/
+
+# Build artifacts
+Makefile
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Executables and object files
+*.o
+*.lo
+*.la
+*.al
+*.so
+*.dylib
+*.a
+*.exe
+*.out
+
+# Editor and OS files
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# CTest files
+Testing/
+CTestTestfile.cmake
+DartConfiguration.tcl
+
+# Logs
+*.log
